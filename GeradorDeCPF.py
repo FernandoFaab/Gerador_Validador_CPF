@@ -9,6 +9,8 @@ for valor in cpf_list:
 
 soma1 = (11 - (soma1 % 11))
 
+# tem
+
 cpf_list.append(soma1)
 
 soma2 = 0
