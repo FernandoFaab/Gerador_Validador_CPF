@@ -71,9 +71,9 @@ while True:
                     else:
                         print("CPF inválido")
                 elif digitos < 11:
-                    print('Você deve diginar um cpf contendo 11 números!')
+                    print('Você deve digitar um cpf contendo 11 números!')
                 else:
-                    print('Você deve diginar um cpf contendo 11 números!')
+                    print('Você deve digitar um cpf contendo 11 números!')
                     continue
             else:
                 print('Você só pode digitar números!')
