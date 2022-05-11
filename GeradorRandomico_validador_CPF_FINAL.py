@@ -4,10 +4,11 @@ while True:
 
     while True:
         if resposta == 1:
-            from random import randint
-            cpf = str(randint(000000000, 999999999))
-
-            cpf_list = list(map(int, cpf))
+            cpf_list = []
+            import random
+            for x in range(0, 9):
+                cpf = random.randint(0, 9)
+                cpf_list.append(cpf)
 
             soma1 = 0
             i = 10
@@ -16,6 +17,8 @@ while True:
                 i = i - 1
 
             soma1 = (11 - (soma1 % 11))
+            if soma1 > 9:
+                soma1 = 0
 
             cpf_list.append(soma1)
 
@@ -25,6 +28,8 @@ while True:
                 soma2 = soma2 + valor * i
                 i = i - 1
             soma2 = (11 - (soma2 % 11))
+            if soma2 > 9:
+                soma2 = 0
 
             cpf_list.append(soma2)
 
@@ -53,6 +58,8 @@ while True:
                         i = i - 1
 
                     soma1 = (11 - (soma1 % 11))
+                    if soma1 > 9:
+                        soma1 = 0
 
                     if soma1 == digito1:
                         cpf_list.append(soma1)
@@ -62,6 +69,9 @@ while True:
                             soma2 = soma2 + valor * i
                             i = i - 1
                         soma2 = (11 - (soma2 % 11))
+                        if soma2 > 9:
+                            soma2 = 0
+
                         if soma2 == digito2:
                             print("CPF válido")
                             break
@@ -82,4 +92,3 @@ while True:
         else:
             print('Digite uma opção válida!')
             break
-
