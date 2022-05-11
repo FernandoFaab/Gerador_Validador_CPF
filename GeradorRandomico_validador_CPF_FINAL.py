@@ -1,6 +1,6 @@
 while True:
 
-    resposta = int(input('Você deseja gerar ou validar um CPF? (GERAR=1 - VALIDAR=2): '))
+    resposta = int(input('Você deseja gerar ou validar um CPF? (GERAR=1 / VALIDAR=2 / ENCERRAR=3): '))
 
     while True:
         if resposta == 1:
@@ -36,7 +36,7 @@ while True:
             print(*cpf_list, sep='')
             break
 
-        elif resposta == 2:
+        if resposta == 2:
             cpf = input('Digite um CPF: ')
 
             if cpf.isdigit():
@@ -88,6 +88,9 @@ while True:
             else:
                 print('Você só pode digitar números!')
                 continue
+
+        if resposta == 3:
+            exit()
 
         else:
             print('Digite uma opção válida!')
