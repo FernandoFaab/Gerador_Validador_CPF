@@ -15,7 +15,6 @@ while True:
             for valor in cpf_list:
                 soma1 = soma1 + valor * i
                 i = i - 1
-
             soma1 = (11 - (soma1 % 11))
             if soma1 > 9:
                 soma1 = 0
@@ -80,18 +79,14 @@ while True:
                             break
                     else:
                         print("CPF inválido")
-                elif digitos < 11:
-                    print('Você deve digitar um cpf contendo 11 números!')
                 else:
                     print('Você deve digitar um cpf contendo 11 números!')
                     continue
             else:
                 print('Você só pode digitar números!')
                 continue
-
         if resposta == 3:
             exit()
-
         else:
             print('Digite uma opção válida!')
             break
